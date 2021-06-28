@@ -1,0 +1,18 @@
+image: node:latest
+
+# This folder is cached between builds
+# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  script:
+    - npm install gh-pages --save-dev # or yarn install
+    - npm run generate -- -d public # or yarn run generate -d public
+    - npm run deploy
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
