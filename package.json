@@ -69,7 +69,8 @@
     "jest": "24.9.0",
     "jest-serializer-vue": "2.0.2",
     "lerna": "3.19.0",
-    "vue-jest": "3.0.5"
+    "vue-jest": "3.0.5",
+    "deploy": "gh-pages -d dist"
   },
   "engines": {
     "node": ">=10",
